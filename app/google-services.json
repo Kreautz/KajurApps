@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "482295358202",
+    "firebase_url": "https://kajurapps-02.firebaseio.com",
+    "project_id": "kajurapps-02",
+    "storage_bucket": "kajurapps-02.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:482295358202:android:c569f448afc17d32",
+        "android_client_info": {
+          "package_name": "com.riel.kajurapps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "482295358202-v8ji8s9en8q36pjbt3llb1oupi49gbbo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.riel.kajurapps",
+            "certificate_hash": "4216140d2f3db930f500a8047c04cdc55f6bf276"
+          }
+        },
+        {
+          "client_id": "482295358202-opeelsssdtohva3b3q08h3jvvlbke6r0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCG6FWWBKCt9NaDL9SOWi_60m0gzCO8lRY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "482295358202-opeelsssdtohva3b3q08h3jvvlbke6r0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

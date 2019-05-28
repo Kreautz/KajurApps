@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KajurApps</string>
+    <string name="action_settings">Pengaturan</string>
+    <string name="action_sign_in">Masuk atau Daftar</string>
+    <string name="action_sign_in_short">Masuk</string>
+    <string name="invalid_password">Password harus lebih dari 5 karakter</string>
+    <string name="invalid_username">Username tidak ditemukan</string>
+    <string name="login_failed">Login gagal</string>
+    <string name="menu_about">Tentang Kami</string>
+    <string name="menu_cart">Keranjang</string>
+    <string name="menu_logout">Keluar</string>
+    <string name="menu_menu">Beranda</string>
+    <string name="menu_profile">Profil</string>
+    <string name="welcome">Selamat Datang</string>
+    <string name="beranda">Beranda</string>
+    <string name="buyHistory">Riwayat Beli</string>
+    <string name="cart">Keranjang</string>
+    <string name="logout">Keluar</string>
+    <string name="product">Produk</string>
+    <string name="saldo">Saldo</string>
+    <string name="sell">Jual</string>
+    <string name="sellHistory">Riwayat Jual</string>
+    <string name="setting">Pengaturan</string>
+</resources>
