@@ -10,9 +10,11 @@
             android:title="@string/menu_profile" />
         <item
             android:id="@+id/nav_menu"
+            android:icon="@drawable/ic_action_home"
             android:title="@string/menu_menu" />
         <item
             android:id="@+id/nav_cart"
+            android:icon="@drawable/ic_action_cart"
             android:title="@string/menu_cart" />
         <item
             android:id="@+id/nav_scanner"

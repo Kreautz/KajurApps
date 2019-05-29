@@ -1,6 +1,7 @@
 package com.riel.kajurapps;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -12,6 +13,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.MenuItem;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
+import java.util.Locale;
 
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -34,7 +36,7 @@ public class NavActivity extends AppCompatActivity
 
     private FirebaseAuth mAuth;
     private GoogleSignInClient mGoogleSignInClient;
-
+    private int b = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -94,7 +96,19 @@ public class NavActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_english) {
+            Locale locale = new Locale("in");
+            Configuration config = getBaseContext().getResources().getConfiguration();
+            config.locale = locale;
+            getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+//            b = 1;
+            return true;
+        } else if (id == R.id.action_indonesia){
+            Locale locale = new Locale("en");
+            Configuration config = getBaseContext().getResources().getConfiguration();
+            config.locale = locale;
+            getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+//            b = 0;
             return true;
         }
 
@@ -108,19 +122,20 @@ public class NavActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_profile) {
-            // Handle the camera action
+            Intent p = new Intent(this, ProfileActivity.class);
+            startActivity(p);
         } else if (id == R.id.nav_menu) {
-
+            Intent m = new Intent(this, NavActivity.class);
+            startActivity(m);
         } else if (id == R.id.nav_cart) {
 
         } else if (id == R.id.nav_scanner) {
 
         } else if (id == R.id.nav_about) {
-            Intent p = new Intent(this, ProfileActivity.class);
-            startActivity(p);
+
         } else if (id == R.id.nav_logout) {
             signOut();
-            Intent i = new Intent(NavActivity.this, LoginActivity.class);
+            Intent i = new Intent(this, LoginActivity.class);
             startActivity(i);
         }
 
@@ -150,6 +165,17 @@ public class NavActivity extends AppCompatActivity
                 Glide.with(this).load(profilePicUrl)
                         .into(profileImage);
             }
+        }
+    }
+
+    private void bahasa() {
+
+        if (b == 0) {
+            findViewById(R.id.action_english).setVisibility(View.GONE);
+            findViewById(R.id.action_indonesia).setVisibility(View.VISIBLE);
+        }else{
+            findViewById(R.id.action_english).setVisibility(View.VISIBLE);
+            findViewById(R.id.action_indonesia).setVisibility(View.GONE);
         }
     }
 
